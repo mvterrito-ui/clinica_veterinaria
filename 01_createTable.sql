@@ -84,9 +84,9 @@ select * from Pet;
 
 INSERT INTO veterinario(nome, crmv)
 VALUES
-('DRA.MARISA TESTE','SP1234'),
-('DR.BRUNO CARVALHO', 'SP1020'),
-('Dr.teste', 'GO1234');
+('DRA. MARISA ISABEL','SP1234'),
+('DR. BRUNO CARVALHO', 'SP1020'),
+('Dra. TERESA CRISTINA', 'GO1234');
 
 select * from veterinario;
 
@@ -122,8 +122,8 @@ select * from medicamento/
 INSERT INTO cliente(nome, telefone)
 VALUES   
 ('ANA DE LIMA' , '1199999-99'),
-('Jose' , '1188888-77'),
-('Paulo' , '1166666-55');
+('JOSÉ ANTONIO' , '1188888-77'),
+('PAULO MIGUEL' , '1166666-55');
  
 select * from cliente;
  
@@ -137,9 +137,9 @@ Select * from Pet;
  
 INSERT INTO veterinario (nome, crmv)
 VALUES
-('DRA.MARISA' , 'SP0302'),
-('DRA.ANGELA' , 'SP1621'),
-('DRA.FABIANA' , 'SP4152');
+('DRA. MARISA' , 'SP0302'),
+('DRA. ANGELA' , 'SP1621'),
+('DRA. FABIANA' , 'SP4152');
  
 Select * from veterinario;
  
@@ -157,63 +157,15 @@ VALUES
 ('vermit02' ,3, '2023-12-30',2),
 ('vermit03' , 3, '2023-01-30',3);
  
-INSERT INTO cliente(nome, telefone)
-VALUES   
-('ANA DE LIMA' , '1199999-99'),
-('Jose' , '1188888-77'),
-('Paulo' , '1166666-55');
- 
-select * from cliente;
- 
-INSERT INTO pet(nome, especie, idade, id_cliente)
-VALUES
-('Mel', 'cachorro',5,3),
-('belinha', 'cachorro',4,1),
-('Thor' , 'cachorro',6, 1);
- 
-Select * from Pet;
 
 delete FROM pet
 WHERE id_pet BETWEEN 5 AND 15;
  
-INSERT INTO veterinario (nome, crmv)
-VALUES
-('DRA.MARISA' , 'SP0302'),
-('DRA.ANGELA' , 'SP1621'),
-('DRA.FABIANA' , 'SP4152');
  
-Select * from veterinario;
 
 delete FROM veterinario
 WHERE id_veterinario BETWEEN 5 AND 15;
  
-INSERT INTO consulta(data, tipo_servico, id_pet, id_veterinario)
-VALUES
-('2025-05-30' , 'vacina',1,1),
-('2025-06-02' , 'castracao',2,2),
-('2025-11-03' , 'retorno',1,1);
- 
-Select * from consulta;
- 
-INSERT INTO medicamento(nome, quantidade, validade_medicamento, id_consulta)
-VALUES
-('vermit' , 2, '2023-11-30',1),
-('vermit02' ,3, '2023-12-30',2),
-('vermit03' , 3, '2023-01-30',3);
- 
-Select * from medicamento;
- 
- 
-INSERT INTO medicamento_consulta(id_consulta, id_medicamento, dose_aplicada)
-VALUES
-(1,1, '1 dose unica'),
-(1,2, 'aplicar duas gotas no ouvido'),
-(3,2, '1 comprimido');
- 
-select * from medicamento_consulta;
-
-select * from medicamento;
-
 
 ----update ---
  
