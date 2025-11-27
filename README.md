@@ -1,6 +1,6 @@
 Sistema de Gestão de Clínica Veterinária
 
-Este projeto faz parte da **Experiência Prática 3 e 4** da disciplina de Banco de Dados.  
+Este projeto faz parte da **Experiência Prática** da disciplina de Banco de Dados.  
 O objetivo é modelar, criar e manipular dados em um **banco de dados relacional** utilizando **SQLite** e comandos SQL (DDL e DML).
 
 ---
@@ -24,10 +24,12 @@ Tecnologias Utilizadas
 - **SQLiteStudio** (para criação e execução dos scripts)  
 - **SQL (DDL e DML)**  
 - **GitHub** (versionamento e compartilhamento do código)
+- **Visual Studio** (ambiente de desenvolvimento e integração com projetos)
+
 
 ---
 
-## 🚀 Como Executar
+## Como Executar
 
 1. Instale o [SQLiteStudio](https://sqlitestudio.pl).  
 2. Crie um novo banco de dados.  
@@ -48,3 +50,41 @@ CREATE TABLE consulta (...);
 CREATE TABLE medicamento (...);
 CREATE TABLE medicamento_consulta (...);
 
+Inserção de Dados (INSERT)
+INSERT INTO cliente (nome, telefone) VALUES ('Ana de Lima', '1199999-99');
+INSERT INTO pet (nome, especie, idade, id_cliente) VALUES ('Rex', 'Cachorro', 5, 3);
+
+
+Consultas (SELECT)
+-- Listar clientes e seus pets
+SELECT c.nome AS cliente, p.nome AS pet, p.especie
+FROM cliente c
+JOIN pet p ON c.id_cliente = p.id_cliente;
+
+
+Atualizações (UPDATE)
+UPDATE cliente SET telefone = '1194444-33' WHERE id_cliente = 1;
+
+
+Exclusões (DELETE)
+DELETE FROM medicamento WHERE validade_medicamento < '2025-01-01';
+
+
+
+     Exemplos de Consultas
+- Listar todos os clientes e seus pets.
+- Listar consultas com respectivos veterinários.
+- Listar medicamentos aplicados em cada consulta.
+
+     Entregáveis
+- Arquivo script.sql com:
+- Criação das tabelas (DDL)
+- Inserção de dados (INSERT)
+- Consultas (SELECT)
+- Atualizações (UPDATE)
+- Exclusões (DELETE)
+- Este README.md explicando como executar o projeto.
+
+     Autor
+Projeto desenvolvido por Marcos Vinicio Territo
+Disciplina: Modelagem de Banco de Dados – Experiência Prática
