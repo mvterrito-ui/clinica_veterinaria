@@ -243,5 +243,11 @@ UPDATE cliente
 SET nome = 'José Aparecido'
 WHERE nome = 'Jose teste';
 
-select * from veterinaria_clinica;
+select * from veterinario;
 
+UPDATE veterinario
+SET nome = 'DRA.TERESA CRISTINA'
+WHERE nome = 'Dr.teste';
+
+DELETE FROM veterinario
+WHERE id_veterinario = 4;
