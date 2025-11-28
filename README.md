@@ -1,6 +1,6 @@
 Sistema de Gestão de Clínica Veterinária
 
-Este projeto faz parte da **Experiência Prática** da disciplina de Banco de Dados.  
+Este projeto faz parte da **Experiência Prática** da disciplina Modelagem de Banco de Dados.  
 O objetivo é modelar, criar e manipular dados em um **banco de dados relacional** utilizando **SQLite** e comandos SQL (DDL e DML).
 
 ---
@@ -42,7 +42,7 @@ Tecnologias Utilizadas
 ## Estrutura dos Scripts
 
 ### 1. Criação das Tabelas (DDL)
-```sql
+
 CREATE TABLE cliente (...);
 CREATE TABLE pet (...);
 CREATE TABLE veterinario (...);
@@ -51,10 +51,10 @@ CREATE TABLE medicamento (...);
 CREATE TABLE medicamento_consulta (...);
 
 Inserção de Dados (INSERT)
-INSERT INTO cliente (nome, telefone) VALUES ('Ana de Lima', '1199999-99');
-INSERT INTO pet (nome, especie, idade, id_cliente) VALUES ('Rex', 'Cachorro', 5, 3);
+INSERT INTO cliente (nome, telefone) VALUES ('Ana de Lima', '11-9999999');
+INSERT INTO pet (nome, especie, idade, id_cliente) VALUES ('Rex', 'Cachorro', '5', '3');
 
-
+
 Consultas (SELECT)
 -- Listar clientes e seus pets
 SELECT c.nome AS cliente, p.nome AS pet, p.especie
@@ -63,7 +63,7 @@ JOIN pet p ON c.id_cliente = p.id_cliente;
 
 
 Atualizações (UPDATE)
-UPDATE cliente SET telefone = '1194444-33' WHERE id_cliente = 1;
+UPDATE cliente SET telefone = '11-9444433' WHERE id_cliente = 1;
 
 
 Exclusões (DELETE)
