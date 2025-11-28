@@ -72,6 +72,7 @@ DELETE FROM medicamento WHERE validade_medicamento < '2025-01-01';
 
 
      Exemplos de Consultas
+     
 - Listar todos os clientes e seus pets.
 - Listar consultas com respectivos veterinários.
 - Listar medicamentos aplicados em cada consulta.
@@ -86,5 +87,5 @@ DELETE FROM medicamento WHERE validade_medicamento < '2025-01-01';
 - Este README.md explicando como executar o projeto.
 
      Autor
-Projeto desenvolvido por Marcos Vinicio Territo
+Projeto desenvolvido por Marcos Vinicio Territo - RGM: 46604090
 Disciplina: Modelagem de Banco de Dados – Experiência Prática
